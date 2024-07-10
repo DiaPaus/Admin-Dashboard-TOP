@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+p{
+    color:black;
+    font-weight: 300;
+}
+
+.container{
+    display:grid;
+    grid-template-rows: repeat(7,1fr);
+    grid-template-columns: repeat(5,1fr);
+    height: auto;
+
+}
+
+.sidebar{
+grid-area: 1/1/8/2;
+background-color: rgb(94, 91, 231);
+}
+
+.sidebar .branding{
+    display:flex;
+    color:white;
+    font-size: larger;
+    align-items: center;
+    gap:2rem;
+    margin-top:1rem;
+}
+
+.sidebar .branding .logo{
+display:grid;
+grid-template-rows: repeat(3,1rem);
+grid-template-columns: repeat(2,1rem);
+gap:4px;
+margin-left: 2.5rem;
+}
+.sidebar .branding .logo >div{
+    background-color: white;
+}
+
+.sidebar .branding .logo .first{
+    grid-area: 1/1/3/2;
+
+}
+.sidebar .branding .logo .second{
+    grid-area: 1/2/2/3;
+}
+
+.sidebar .branding .logo .third{
+    grid-area: 3/1/4/2;
+}
+
+.sidebar .branding .logo .fourth{
+    grid-area: 2/2/4/3; 
+}
+
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    margin-bottom: 2rem;    
+    font-weight: 800;
+    font-size: large;
+}
+
+a{
+    text-decoration: none;
+    color:white;        
+}
+
+a svg{
+    padding-right: 1rem;
+}
+.header{
+grid-area:1/2/2/6;
+display:grid;
+grid-template-rows: repeat(2,1fr);
+grid-template-columns: repeat(14,1fr);
+box-shadow: 0 -20px 10px -20px rgba(0,0,0,0.45) inset;
+}
+
+.search-bar{
+    grid-area:1/1/2/9;    
+    display:flex;
+    align-items: center;
+    gap:1rem;
+    margin:1rem;
+}
+
+.search-bar #search{
+    height:2rem;
+    border-radius: 20px;
+    background-color: rgb(236, 236, 236);
+    border: none;
+}
+
+.search-bar svg{
+    fill:black;
+}
+
+.search-bar input{
+    width:100%;
+    height:10%;
+}
+
+.user-info{
+    grid-area:1/10/2/13;
+      display: grid;
+    grid-auto-flow:column;
+    align-items: center;
+}
+
+.user-info svg{
+    fill:black;
+    justify-self:self-end;
+}
+
+.user-info img{
+    justify-self: center;
+    height:60%;
+    width:60%;
+}
+
+.user-info h4{
+    justify-self: self-start;
+}
+
+.user-welcome{
+    grid-area:2/1/3/9;
+    display:grid;
+    grid-template:repeat(2,1fr)/repeat(9,1fr) ;
+    gap:8px;
+    }
+.user-welcome >*{
+    padding:0;
+    margin:0;
+}
+
+.user-welcome img{
+grid-area:1/1/3/2;
+align-self: center;
+justify-self:self-end;
+width:75%;
+height:75%;
+}
+
+.user-welcome p{
+    grid-area:1/2/2/10;
+    align-self:self-end;
+}
+
+.user-welcome h3{
+    grid-area:2/2/3/10;
+    align-self:self-start;
+    justify-self:self-start;
+    }
+
+.buttons{
+    grid-area:2/9/3/15;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    margin:0 1rem 0 1rem;
+    align-items: center;
+}
+
+.btn{
+    background-color: rgb(94, 91, 231);
+    color:white;
+    font-weight: 800;
+    font-size: large;
+    border-radius: 30px;
+    border:none;
+    width:8rem;
+    height:3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover
+{
+    cursor: pointer;
+}
+
+.main-content{
+background-color: rgb(236, 236, 236);
+grid-area:2/2/8/6;
+display:grid;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: repeat(2,1fr);
+}
+
+.main-content h3{
+    margin-left:1rem;
+}
+
+.main-content h4{
+    margin-bottom:0;
+}
+
+.main-content .projects p{
+    margin-top:0;
+}
+
+.projects{
+grid-area: 1/1/3/4;
+}
+
+.projects svg{
+    fill:black;
+}
+
+.projects .items{
+    display:grid;
+    grid-template:repeat(3,1fr)/repeat(2,1fr) ;
+    gap:2rem;
+    margin:1rem;
+}
+
+.projects .items .item {
+    background-color: white;
+    padding:2rem;
+    border-radius: 10px;
+    display:grid;
+    flex-direction: column;
+    border-left-color: rgb(228, 194, 5);
+    border-left-width: 1rem;
+    border-left-style: solid;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+}
+
+.projects .items .item .icons{
+    align-self: flex-end;
+    justify-self: flex-end;
+    display:flex;
+    gap:1rem;
+}
+
+.projects .items .item .icons svg:last-child{
+    transform:rotate(-90deg);
+   }
+
+.announcements{
+    grid-area: 1/4/2/5;    
+    }
+
+.announcements .announcements-items{
+    background-color: white;
+    padding:2rem;
+    border-radius: 10px;
+    margin:1rem;
+    margin-bottom: 0;
+    font-size: small;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+}
+
+.announcements .announcements-items >*{
+    border-bottom-style: solid;
+    border-bottom-color: rgb(236, 236, 236);
+}
+
+.announcements .announcements-items .announcement:last-child{
+    border-bottom: none;
+}
+.announcements .announcements-items .announcement .announcement-title{
+        color:black;
+        font-weight: 500;
+        margin-bottom: 0;
+}
+
+.announcements .announcements-items .announcement .announcement-text{
+    margin-top: 0;
+}
+
+.trending{
+    grid-area: 2/4/3/5;
+          }
+
+.trending .trending-items{
+    background-color: white;
+    padding:2rem;
+    border-radius: 10px;
+    margin:1rem;
+    display:grid;
+    gap:2rem;
+    font-size: small;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+}
+
+.trending .trending-items .trending-user{
+    display:grid;
+    grid-template:repeat(2,1fr)/repeat(9,1fr) ;
+    gap:8px
+}
+
+.trending .trending-items .trending-user >*{
+    padding:0;
+    margin:0;
+}
+
+.trending .trending-items .trending-user img{
+    grid-area:1/1/3/2;
+align-self: center;
+justify-self:self-end;
+
+}
+
+.trending .trending-items .trending-user .user-id{
+    grid-area:1/2/2/10;
+    align-self:self-end;
+
+}
+.trending .trending-items .trending-user .user-description{
+    grid-area:2/2/3/10;
+
+}
+
+svg{
+    width:2em;
+    height:2em;
+    fill: white;
+}
+
+img{
+    height: 2rem;
+    width:  2rem;
+    border-radius: 50%;
+}
