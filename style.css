@@ -23,7 +23,6 @@ background-color: rgb(94, 91, 231);
 
 .sidebar .branding{
     display:flex;
-    gap:1rem;
     color:white;
     font-size: larger;
     align-items: center;
