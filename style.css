@@ -14,7 +14,6 @@ p{
     grid-template-rows: repeat(7,1fr);
     grid-template-columns: repeat(5,1fr);
     height: auto;
-
 }
 
 .sidebar{
@@ -24,10 +23,10 @@ background-color: rgb(94, 91, 231);
 
 .sidebar .branding{
     display:flex;
+    gap:1rem;
     color:white;
     font-size: larger;
     align-items: center;
-    gap:2rem;
     margin-top:1rem;
 }
 
